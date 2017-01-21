@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     public float RollForce = 5;
     public PlayerIndex PlayerIndex;
 
+    [Range(-1, 1)]
+    public float UpsideDownThreshold = -0.1f;
+
     public bool DebugControls;
 
     public delegate void JumpDelegate();
@@ -57,15 +60,18 @@ public class PlayerMovement : MonoBehaviour
             buttonAPressed = Input.GetKeyUp(KeyCode.Space);
         }
 
-        if (allowJump)
+        // Move forward when not in air or upside down
+        if (allowJump && !IsUpsideDown())
         {
             var force = leftStick.y > 0 ? ForwardForce : ReverseForce;
             rb.AddForce(transform.forward * leftStick.y * force, ForceMode.Acceleration);
         }
 
+        // Turn the seal with the "tail" as the pivot point
         transform.RotateAround(transform.position - transform.forward / 2, new Vector3(0, 1, 0), leftStick.x * RotationSpeed * Time.deltaTime);
 
-        if (buttonAPressed && allowJump)
+        // Jump/attack
+        if (buttonAPressed /*&& allowJump*/ && !IsUpsideDown() && CanJump())
         {
             rb.velocity = new Vector3();
 
@@ -80,16 +86,36 @@ public class PlayerMovement : MonoBehaviour
             allowJump = false;
         }
 
+        // Roll the seal around its local z-axis
         if (currentState.Triggers.Left > 0)
-        {
             rb.AddRelativeTorque(0, 0, RollForce);
-        }
         else if (currentState.Triggers.Right > 0)
-        {
             rb.AddRelativeTorque(0, 0, -RollForce);
-        }
 
         prevState = currentState;
+    }
+
+    private bool CanJump()
+    {
+        var ray = new Ray(transform.position, Vector3.down);
+
+        var colliders = GetComponentsInChildren<Collider>();
+        var totalBounds = new Bounds(transform.position, new Vector3());
+        foreach (var collider in colliders)
+        {
+            totalBounds.Encapsulate(collider.bounds);
+        }
+
+        return Physics.Raycast(ray, totalBounds.extents.y);
+    }
+
+    private bool IsUpsideDown()
+    {
+        var dotProduct = Vector3.Dot(transform.up, Vector3.up);
+        if (dotProduct < UpsideDownThreshold)
+            return true;
+
+        return false;
     }
 
     public void OnCollisionStay(Collision collision)
