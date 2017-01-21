@@ -23,4 +23,9 @@ public class GameManager : MonoBehaviour
 
         ScoreSystem = FindObjectOfType<scoreSystem>();
     }
+
+    public void SetPlayerCount(int players)
+    {
+        PlayerCount = players;
+    }
 }

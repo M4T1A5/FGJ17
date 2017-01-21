@@ -228,8 +228,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 274529660}
-        m_MethodName: playerButton
+      - m_Target: {fileID: 1484906454}
+        m_MethodName: SetPlayerCount
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -424,8 +424,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 274529660}
-        m_MethodName: playerButton
+      - m_Target: {fileID: 1484906454}
+        m_MethodName: SetPlayerCount
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -470,72 +470,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 250978682}
---- !u!1 &274529657
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 274529659}
-  - 114: {fileID: 274529658}
-  - 114: {fileID: 274529660}
-  m_Layer: 0
-  m_Name: ScoreManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &274529658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 274529657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a0f7af3d1dc6348b4dd16928803d5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  players: 4
-  Scores: 00000000000000000000000000000000
-  playerObjects:
-  - {fileID: 2011221664}
-  - {fileID: 1017988831}
-  - {fileID: 1474637490}
-  - {fileID: 528844338}
-  Texts:
-  - {fileID: 1358105446}
-  - {fileID: 682971751}
-  - {fileID: 137659508}
-  - {fileID: 2057687445}
---- !u!4 &274529659
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 274529657}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 486.5, y: 242, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!114 &274529660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 274529657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac47618102d0533449f67ef2113d638f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scores: {fileID: 274529658}
-  tittleMenu: {fileID: 1985528185}
 --- !u!1 &528844338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,8 +1427,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 274529660}
-        m_MethodName: playerButton
+      - m_Target: {fileID: 1484906454}
+        m_MethodName: SetPlayerCount
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1539,6 +1473,54 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1481770894}
+--- !u!1001 &1484906453
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000010964477204, guid: 6436d695adcf3a54eb753df76fc0e030, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010964477204, guid: 6436d695adcf3a54eb753df76fc0e030, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010964477204, guid: 6436d695adcf3a54eb753df76fc0e030, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010964477204, guid: 6436d695adcf3a54eb753df76fc0e030, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010964477204, guid: 6436d695adcf3a54eb753df76fc0e030, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010964477204, guid: 6436d695adcf3a54eb753df76fc0e030, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010964477204, guid: 6436d695adcf3a54eb753df76fc0e030, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010964477204, guid: 6436d695adcf3a54eb753df76fc0e030, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6436d695adcf3a54eb753df76fc0e030, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1484906454 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010866669330, guid: 6436d695adcf3a54eb753df76fc0e030,
+    type: 2}
+  m_PrefabInternal: {fileID: 1484906453}
+  m_Script: {fileID: 11500000, guid: 64b4ee3978e7dbc49898b62ff82b74af, type: 3}
 --- !u!1 &1601559494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,8 +1745,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 274529660}
-        m_MethodName: playerButton
+      - m_Target: {fileID: 1484906454}
+        m_MethodName: SetPlayerCount
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
