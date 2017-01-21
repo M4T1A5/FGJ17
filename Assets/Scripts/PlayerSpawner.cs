@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using XInputDotNetPure;
 
 public class PlayerSpawner : MonoBehaviour
 {
@@ -13,30 +11,45 @@ public class PlayerSpawner : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.PlayerSpawner = this;
+
         spawnPoints = transform.GetComponentsInChildren<Transform>().Skip(1).ToArray();
 
         var playerCount = GameManager.Instance.PlayerCount;
 
         for (int i = 0; i < playerCount; i++)
         {
-            var foundSpawn = false;
-            do
-            {
-                var spawn = Random.Range(0, spawnPoints.Length);
-                if(usedSpawns.Contains(spawn))
-                    continue;
-
-                usedSpawns.Add(spawn);
-                var player = Instantiate(PlayerPrefab, spawnPoints[spawn].position, Quaternion.identity) as GameObject;
-                player.GetComponent<PlayerMovement>().PlayerIndex = (PlayerIndex) i;
-                foundSpawn = true;
-            } while (!foundSpawn);
+            SpawnPlayer(i, FindSpawn(i));
         }
     }
 
-    public void RequestRespawn(Transform player, int playerId)
+    private Vector3 FindSpawn(int playerId)
     {
-        player.position = spawnPoints[usedSpawns[playerId]].position;
-        player.rotation = Quaternion.identity;
+        var foundSpawn = false;
+        var spawnPoint = new Vector3();
+        while (!foundSpawn)
+        {
+            var spawn = Random.Range(0, spawnPoints.Length);
+            if (usedSpawns.Contains(spawn))
+                continue;
+
+            usedSpawns.Add(spawn);
+            foundSpawn = true;
+            spawnPoint = spawnPoints[spawn].position;
+        }
+
+        return spawnPoint;
+    }
+
+    private void SpawnPlayer(int playerId, Vector3 position)
+    {
+        var player = Instantiate(PlayerPrefab, position, Quaternion.identity) as GameObject;
+        player.GetComponent<Player>().PlayerId = playerId;
+    }
+
+    public void RequestRespawn(int playerId)
+    {
+        var selectedSpawn = usedSpawns[playerId];
+        SpawnPlayer(playerId, spawnPoints[selectedSpawn].position);
     }
 }

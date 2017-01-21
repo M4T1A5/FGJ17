@@ -4,10 +4,9 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
     public int PlayerId;
-    public int LastHitTime;
+    public int LastHitTime = 5;
     public bool hasLastHit;
-    public Vector3 RespawnPoint;
-    public Transform LastHit { get; set; }
+    public Transform LastHit;
     private scoreSystem _scoreSys;
 
     private Coroutine timer;
@@ -23,29 +22,26 @@ public class Player : MonoBehaviour
         {
             // Player has fallen out of level for sure               
             PlayerDeath();
-            print("player has died");
-                
+            Destroy(gameObject);
+            GameManager.Instance.PlayerSpawner.RequestRespawn(PlayerId);
         }
     }
 
-   
+
     private void OnCollisionStay(Collision collision)
     {
-        if(collision.transform.CompareTag("Player"))
+        if (collision.transform.CompareTag("Player"))
         {
             if (timer != null)
             {
                 StopCoroutine(timer);
             }
-            
+
             LastHit = collision.transform;
             hasLastHit = true;
             timer = StartCoroutine(LastHitOff());
         }
-
     }
-
-
 
 
     //timer for LasHit duration
@@ -60,14 +56,13 @@ public class Player : MonoBehaviour
     /// <summary>
     /// what happens when player dies
     /// </summary>
-
     private void PlayerDeath()
     {
         if (LastHit != null)
         {
             var lastHitId = LastHit.GetComponent<Player>().PlayerId;
             _scoreSys.updateScore(lastHitId, 1);
-            
+
             InformDeathToKiller();
             LastHit = null;
 
@@ -76,35 +71,24 @@ public class Player : MonoBehaviour
         {
             _scoreSys.updateScore(PlayerId, -1);
         }
-
-        gameObject.transform.position = RespawnPoint;
     }
 
 
     /// <summary>
     /// if killer's LastHit is killed one (this GameObject), reset killer's LastHit 
     /// </summary>
-
-
     private void InformDeathToKiller()
     {
-        if(LastHit == null)
+        if (LastHit == null)
             return;
-        
-        Transform KillerHit = LastHit.GetComponent<Player>().LastHit;
-        print(KillerHit.name + " this is killerhit");
 
-        if (KillerHit == transform)
+        var killerHit = LastHit.GetComponent<Player>().LastHit;
+
+        if (killerHit == transform)
         {
-            print("killer nuulled");
             LastHit.GetComponent<Player>().LastHit = null;
             hasLastHit = false;
         }
 
     }
-
-
-    
-
-   
 }

@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 
     public int PlayerCount;
 
+    public PlayerSpawner PlayerSpawner;
+
     public scoreSystem ScoreSystem;
 
     private void Awake()

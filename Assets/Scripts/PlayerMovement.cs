@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float RotationSpeed = 10;
     public float JumpAngle = 45;
+    public float RollForce = 5;
     public PlayerIndex PlayerIndex;
 
     public bool DebugControls;
@@ -22,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        PlayerIndex = (PlayerIndex) GetComponent<Player>().PlayerId;
     }
 
     private void Update()
@@ -71,6 +74,16 @@ public class PlayerMovement : MonoBehaviour
 
             allowJump = false;
         }
+
+        if (currentState.Triggers.Left > 0)
+        {
+            rb.AddRelativeTorque(0, 0, RollForce);
+        }
+        else if (currentState.Triggers.Right > 0)
+        {
+            rb.AddRelativeTorque(0, 0, -RollForce);
+        }
+
         prevState = currentState;
     }
 
