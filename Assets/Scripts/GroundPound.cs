@@ -43,6 +43,7 @@ public class GroundPound : MonoBehaviour
             {
                 hit.GetComponent<Rigidbody>()
                     .AddExplosionForce(Power, explosionPosition, Radius, 0, ForceMode.Impulse);
+                hit.GetComponent<Player>().LastHit = transform;
             }
         }
 
