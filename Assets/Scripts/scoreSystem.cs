@@ -9,12 +9,15 @@ public class scoreSystem : MonoBehaviour
     public int[] Scores;
     public GameObject[] playerObjects;
     public Text[] Texts;
-    
-
     private bool[] scoreActivation;
 
-    void ActivateScores(int playersInGame)
+
+
+    public void ActivateScores(int playersInGame)
     {
+        players = playersInGame;
+        scoreActivation = new bool[players];
+
         for (int i = 0; i < playersInGame; i++)
         {
             scoreActivation[i] = true;
@@ -39,24 +42,12 @@ public class scoreSystem : MonoBehaviour
 
 
 
-    // Use this for initialization
-    void Start ()
-    {
-        scoreActivation = new bool[players];
-        ActivateScores(players);
-        updateScore(1, 200);
-        updateScore(2, -10);
-        updateScore(3, 23);
+    
 
-
-
-
-	
-	}
     /// <summary>
     /// call this to change player scores
     /// </summary>
-    /// <param name="playerNumber"> player's number whose score you want change</param>
+    /// <param name="playerNumber"> player's ID to </param>
     /// <param name="gainedScore"> score you want to add to current score</param>
     public void updateScore(int playerNumber, int gainedScore)
     {
@@ -72,6 +63,7 @@ public class scoreSystem : MonoBehaviour
         for (int k = 0; k < Scores.Length; k++)
         {
             Scores[k] = 0;
+            Texts[k].text = Scores[k].ToString();
 
         }
     }
