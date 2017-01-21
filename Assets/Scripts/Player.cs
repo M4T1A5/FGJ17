@@ -16,18 +16,6 @@ public class Player : MonoBehaviour
         _scoreSys = GameManager.Instance.ScoreSystem;
     }
 
-    private void Update()
-    {
-        if (transform.position.y < -10)
-        {
-            // Player has fallen out of level for sure               
-            PlayerDeath();
-            Destroy(gameObject);
-            GameManager.Instance.PlayerSpawner.RequestRespawn(PlayerId);
-        }
-    }
-
-
     private void OnCollisionStay(Collision collision)
     {
         if (collision.transform.CompareTag("Player"))
@@ -56,7 +44,7 @@ public class Player : MonoBehaviour
     /// <summary>
     /// what happens when player dies
     /// </summary>
-    private void PlayerDeath()
+    public void PlayerDeath()
     {
         if (LastHit != null)
         {
@@ -71,6 +59,8 @@ public class Player : MonoBehaviour
         {
             _scoreSys.updateScore(PlayerId, -1);
         }
+
+        Destroy(gameObject);
     }
 
 
