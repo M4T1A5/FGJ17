@@ -10,11 +10,14 @@ public class PlayerMovement : MonoBehaviour
 
     public bool DebugControls;
 
+    public delegate void JumpDelegate();
+    public event JumpDelegate PlayerJumpEvent;
+
     private Rigidbody rb;
 
     private GamePadState prevState, currentState;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
 
@@ -22,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         rb.centerOfMass = localRotationPoint;
     }
 
-    void Update()
+    private void Update()
     {
         currentState = GamePad.GetState(PlayerIndex);
 
@@ -55,14 +58,15 @@ public class PlayerMovement : MonoBehaviour
 
         transform.RotateAround(transform.position - transform.forward / 2, new Vector3(0, 1, 0), leftStick.x * RotationSpeed * Time.deltaTime);
         
-        //rb.AddTorque(0, leftStick.x, 0, ForceMode.VelocityChange);
-
         if (buttonAPressed && transform.position.y < 0.5)
         {
             var angle = transform.rotation 
                 * Quaternion.AngleAxis(-JumpAngle, new Vector3(1, 0, 0));
             var jumpVector = angle * Vector3.forward;
-            rb.AddForce(jumpVector * 5, ForceMode.Impulse); 
+            rb.AddForce(jumpVector * 5, ForceMode.Impulse);
+
+            if (PlayerJumpEvent != null)
+                PlayerJumpEvent.Invoke();
         }
 
         prevState = currentState;
