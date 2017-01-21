@@ -4,6 +4,8 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float ForwardForce = 5;
+    public float ReverseForce = 5;
     public float RotationSpeed = 10;
     public float JumpAngle = 45;
     public float RollForce = 5;
@@ -55,8 +57,11 @@ public class PlayerMovement : MonoBehaviour
             buttonAPressed = Input.GetKeyUp(KeyCode.Space);
         }
 
-        if(allowJump)
-            rb.AddForce(transform.forward * leftStick.y * 15, ForceMode.Acceleration);
+        if (allowJump)
+        {
+            var force = leftStick.y > 0 ? ForwardForce : ReverseForce;
+            rb.AddForce(transform.forward * leftStick.y * force, ForceMode.Acceleration);
+        }
 
         transform.RotateAround(transform.position - transform.forward / 2, new Vector3(0, 1, 0), leftStick.x * RotationSpeed * Time.deltaTime);
 
