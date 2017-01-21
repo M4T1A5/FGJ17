@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if(allowJump)
+            rb.AddForce(transform.forward * leftStick.y * 15, ForceMode.Acceleration);
 
         transform.RotateAround(transform.position - transform.forward / 2, new Vector3(0, 1, 0), leftStick.x * RotationSpeed * Time.deltaTime);
 
