@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GroundPound : MonoBehaviour
 {
     public float Radius = 5;
     public float Power = 5;
+
+    public bool SuperHit;
+    public float SuperHitRadius = 15;
+    public float SuperHitPower = 15;
 
     public GameObject FatWave;
 
@@ -16,7 +21,7 @@ public class GroundPound : MonoBehaviour
         playerMovement.PlayerJumpEvent += JumpEvent;
     }
 
-    private void JumpEvent()
+    public void JumpEvent()
     {
         hasJumped = true;
     }
@@ -34,20 +39,47 @@ public class GroundPound : MonoBehaviour
 
         hasJumped = false;
 
-        var hits = Physics.OverlapSphere(transform.position, Radius,
+        var radius = SuperHit ? SuperHitRadius : Radius;
+
+        var hits = Physics.OverlapSphere(transform.position, radius,
             LayerMask.GetMask("Player"));
         var explosionPosition = transform.position;
+        var hitPlayers = new List<Transform>();
+
         foreach (var hit in hits)
         {
-            if (hit.transform != transform)
+            var root = Utility.GetRootObject(hit);
+
+            if (root.transform != transform)
             {
-                hit.GetComponent<Rigidbody>()
-                    .AddExplosionForce(Power, explosionPosition, Radius, 0, ForceMode.Impulse);
-                hit.GetComponent<Player>().LastHit = transform;
+                if(hitPlayers.Contains(root))
+                    continue;
+
+                hitPlayers.Add(root);
+
+                if (SuperHit)
+                {
+                    root.GetComponent<Rigidbody>()
+                        .AddExplosionForce(SuperHitPower, explosionPosition, SuperHitRadius,
+                        0, ForceMode.Impulse);
+                }
+                else
+                {
+                    root.GetComponent<Rigidbody>()
+                        .AddExplosionForce(Power, explosionPosition, Radius,
+                        0, ForceMode.Impulse);
+                }
+
+                root.GetComponent<Player>().LastHit = transform;
             }
         }
 
-        var effect = Instantiate(FatWave, transform.position, Quaternion.identity);
+        var effect = Instantiate(FatWave, transform.position, Quaternion.identity) as GameObject;
+        if (SuperHit)
+        {
+            effect.transform.localScale = new Vector3(3, 3, 3);
+            SuperHit = false;
+        }
         Destroy(effect, 2.0f);
     }
 }
