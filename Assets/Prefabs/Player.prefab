@@ -625,7 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ForwardForce: 5
   ReverseForce: 2
-  RotationSpeed: 45
+  RotationSpeed: 90
   JumpAngle: 45
   RollForce: 5
   PlayerIndex: 0
