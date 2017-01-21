@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public delegate void JumpDelegate();
     public event JumpDelegate PlayerJumpEvent;
 
+    private bool allowJump;
+
     private Rigidbody rb;
 
     private GamePadState prevState, currentState;
@@ -20,9 +22,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-
-        var localRotationPoint = (-transform.forward / 2) * transform.localScale.z;
-        rb.centerOfMass = localRotationPoint;
     }
 
     private void Update()
@@ -53,22 +52,28 @@ public class PlayerMovement : MonoBehaviour
             buttonAPressed = Input.GetKeyUp(KeyCode.Space);
         }
 
-        if(!Mathf.Approximately(Mathf.Abs(leftStick.y), 0))
-            rb.AddForce(transform.forward * leftStick.y * 15, ForceMode.Acceleration);
+        rb.AddForce(transform.forward * leftStick.y * 15, ForceMode.Acceleration);
 
         transform.RotateAround(transform.position - transform.forward / 2, new Vector3(0, 1, 0), leftStick.x * RotationSpeed * Time.deltaTime);
-        
-        if (buttonAPressed && transform.position.y < 0.5)
+
+        if (buttonAPressed && allowJump)
         {
-            var angle = transform.rotation 
+            var angle = transform.rotation
                 * Quaternion.AngleAxis(-JumpAngle, new Vector3(1, 0, 0));
             var jumpVector = angle * Vector3.forward;
             rb.AddForce(jumpVector * 5, ForceMode.Impulse);
 
             if (PlayerJumpEvent != null)
                 PlayerJumpEvent.Invoke();
-        }
 
+            allowJump = false;
+        }
         prevState = currentState;
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("Ground"))
+            allowJump = true;
     }
 }

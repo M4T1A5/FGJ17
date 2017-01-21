@@ -6,6 +6,8 @@ public class GroundPound : MonoBehaviour
     public float Radius = 5;
     public float Power = 5;
 
+    public GameObject FatWave;
+
     private bool hasJumped;
 
     private void Start()
@@ -43,5 +45,8 @@ public class GroundPound : MonoBehaviour
                     .AddExplosionForce(Power, explosionPosition, Radius, 0, ForceMode.Impulse);
             }
         }
+
+        var effect = Instantiate(FatWave, transform.position, Quaternion.identity);
+        Destroy(effect, 2.0f);
     }
 }

@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Radius: 5
   Power: 5
+  FatWave: {fileID: 1000013680655590, guid: 5f3e760eb284d6e4fb5e47dcb3f6ec7e, type: 2}
 --- !u!114 &114000011372609234
 MonoBehaviour:
   m_ObjectHideFlags: 1
