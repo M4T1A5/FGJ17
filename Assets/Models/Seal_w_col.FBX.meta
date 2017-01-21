@@ -1,0 +1,118 @@
+fileFormatVersion: 2
+guid: a8996b30b8fc38b40af3b6c4fa923eaa
+timeCreated: 1485014802
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Seal_Body
+    100002: Seal_Body_Col
+    100004: Seal_EyeL
+    100006: Seal_EyeR
+    100008: Seal_FlipperB_Col
+    100010: Seal_FlipperL_Col
+    100012: Seal_FlipperR_Col
+    100014: Seal_Nose
+    100016: //RootNode
+    100018: Seal_Whiskers
+    400000: Seal_Body
+    400002: Seal_Body_Col
+    400004: Seal_EyeL
+    400006: Seal_EyeR
+    400008: Seal_FlipperB_Col
+    400010: Seal_FlipperL_Col
+    400012: Seal_FlipperR_Col
+    400014: Seal_Nose
+    400016: //RootNode
+    400018: Seal_Whiskers
+    2300000: Seal_Body
+    2300002: Seal_Body_Col
+    2300004: Seal_EyeL
+    2300006: Seal_EyeR
+    2300008: Seal_FlipperB_Col
+    2300010: Seal_FlipperL_Col
+    2300012: Seal_FlipperR_Col
+    2300014: Seal_Nose
+    2300016: Seal_Whiskers
+    3300000: Seal_Body
+    3300002: Seal_Body_Col
+    3300004: Seal_EyeL
+    3300006: Seal_EyeR
+    3300008: Seal_FlipperB_Col
+    3300010: Seal_FlipperL_Col
+    3300012: Seal_FlipperR_Col
+    3300014: Seal_Nose
+    3300016: Seal_Whiskers
+    4300000: Seal_Body
+    4300002: Seal_EyeR
+    4300004: Seal_EyeL
+    4300006: Seal_Whiskers
+    4300008: Seal_Nose
+    4300010: Seal_Body_Col
+    4300012: Seal_FlipperR_Col
+    4300014: Seal_FlipperL_Col
+    4300016: Seal_FlipperB_Col
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
