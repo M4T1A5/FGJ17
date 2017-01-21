@@ -52,12 +52,14 @@ public class PlayerMovement : MonoBehaviour
             buttonAPressed = Input.GetKeyUp(KeyCode.Space);
         }
 
-        rb.AddForce(transform.forward * leftStick.y * 15, ForceMode.Acceleration);
+        if(allowJump)
 
         transform.RotateAround(transform.position - transform.forward / 2, new Vector3(0, 1, 0), leftStick.x * RotationSpeed * Time.deltaTime);
 
         if (buttonAPressed && allowJump)
         {
+            rb.velocity = new Vector3();
+
             var angle = transform.rotation
                 * Quaternion.AngleAxis(-JumpAngle, new Vector3(1, 0, 0));
             var jumpVector = angle * Vector3.forward;
@@ -71,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
         prevState = currentState;
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnCollisionStay(Collision collision)
     {
         if (collision.transform.CompareTag("Ground"))
             allowJump = true;

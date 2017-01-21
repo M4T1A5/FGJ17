@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using XInputDotNetPure;
 
 public class PlayerSpawner : MonoBehaviour
 {
@@ -26,7 +27,8 @@ public class PlayerSpawner : MonoBehaviour
                     continue;
 
                 usedSpawns.Add(spawn);
-                Instantiate(PlayerPrefab, spawnPoints[spawn].position, Quaternion.identity);
+                var player = Instantiate(PlayerPrefab, spawnPoints[spawn].position, Quaternion.identity) as GameObject;
+                player.GetComponent<PlayerMovement>().PlayerIndex = (PlayerIndex) i;
                 foundSpawn = true;
             } while (!foundSpawn);
         }
