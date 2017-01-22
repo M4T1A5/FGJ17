@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public PlayerSpawner PlayerSpawner;
 
+    public PUPSpawner PUPSpawner;
+
     public scoreSystem ScoreSystem;
 
 

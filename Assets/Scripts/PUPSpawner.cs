@@ -13,6 +13,8 @@ public class PUPSpawner : MonoBehaviour
     public int TrampolineAmountsPerGame = 1;
     private int m_amountOfTrampolinesSpawned = 0;
 
+    public int m_trampolinesInWorld = 0;
+
     private Transform[] spawnPoints;
 
     private float m_timer = 0.0f;
@@ -20,24 +22,31 @@ public class PUPSpawner : MonoBehaviour
     private void Start()
     {
         spawnPoints = transform.GetComponentsInChildren<Transform>().Skip(1).ToArray();
+
+        GameManager.Instance.PUPSpawner = this;
     }
 
     private void Update()
     {
-        m_timer += Time.deltaTime;
+        if (m_trampolinesInWorld == 0)
+        {
+            m_timer += Time.deltaTime;
 
-        if(m_amountOfTrampolinesSpawned == 0 && m_timer >= TrampolineFirstSpawnTimer)
-        {
-            m_amountOfTrampolinesSpawned++;
-            SpawnPowerUp(TrampolinePrefab);
-            m_timer = 0.0f;
-        }
-        else if (m_timer >= TrampolineSpawnInterval && m_amountOfTrampolinesSpawned < TrampolineAmountsPerGame
-            || m_timer >= TrampolineSpawnInterval && TrampolineAmountsPerGame == -1)
-        {
-            m_amountOfTrampolinesSpawned++;
-            SpawnPowerUp(TrampolinePrefab);
-            m_timer = 0.0f;
+            if (m_amountOfTrampolinesSpawned == 0 && m_timer >= TrampolineFirstSpawnTimer)
+            {
+                m_trampolinesInWorld = 1;
+                m_amountOfTrampolinesSpawned++;
+                SpawnPowerUp(TrampolinePrefab);
+                m_timer = 0.0f;
+            }
+            else if (m_timer >= TrampolineSpawnInterval && m_amountOfTrampolinesSpawned < TrampolineAmountsPerGame
+                || m_timer >= TrampolineSpawnInterval && TrampolineAmountsPerGame == -1)
+            {
+                m_trampolinesInWorld = 1;
+                m_amountOfTrampolinesSpawned++;
+                SpawnPowerUp(TrampolinePrefab);
+                m_timer = 0.0f;
+            }
         }
     }
 
@@ -52,7 +61,5 @@ public class PUPSpawner : MonoBehaviour
             Debug.LogError("Couldn't spawn power up!");
             return;
         }
-
-        
     }
 }
