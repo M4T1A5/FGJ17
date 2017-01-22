@@ -7,6 +7,8 @@ public class PlayerSpawner : MonoBehaviour
     public GameObject PlayerPrefab;
 
     private Transform[] spawnPoints;
+
+    private bool initialSpawn = true;
     private readonly List<int> usedSpawns = new List<int>();
 
     private void Start()
@@ -21,6 +23,8 @@ public class PlayerSpawner : MonoBehaviour
         {
             SpawnPlayer(i, FindSpawn(i));
         }
+
+        initialSpawn = false;
     }
 
     private Vector3 FindSpawn(int playerId)
@@ -30,7 +34,7 @@ public class PlayerSpawner : MonoBehaviour
         while (!foundSpawn)
         {
             var spawn = Random.Range(0, spawnPoints.Length);
-            if (usedSpawns.Contains(spawn))
+            if (usedSpawns.Contains(spawn) && initialSpawn)
                 continue;
 
             usedSpawns.Add(spawn);
@@ -66,7 +70,6 @@ public class PlayerSpawner : MonoBehaviour
 
     public void RequestRespawn(int playerId)
     {
-        var selectedSpawn = usedSpawns[playerId];
-        SpawnPlayer(playerId, spawnPoints[selectedSpawn].position);
+        SpawnPlayer(playerId, FindSpawn(playerId));
     }
 }

@@ -19,9 +19,11 @@ public class PlayerMovement : MonoBehaviour
     public delegate void JumpDelegate();
     public event JumpDelegate PlayerJumpEvent;
 
-    private bool allowJump;
+    private bool allowJump = true;
 
     private Rigidbody rb;
+
+    private Animator animator;
 
     private GamePadState prevState, currentState;
 
@@ -30,11 +32,13 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         PlayerIndex = (PlayerIndex) GetComponent<Player>().PlayerId;
+
+        animator = transform.GetChild(0).GetComponent<Animator>();
     }
 
     private void Update()
     {
-        currentState = GamePad.GetState(PlayerIndex);
+        currentState = GamePad.GetState(PlayerIndex, GamePadDeadZone.Circular);
 
         var leftStick = new Vector2(currentState.ThumbSticks.Left.X, currentState.ThumbSticks.Left.Y);
         var rightStick = new Vector2(currentState.ThumbSticks.Right.X, currentState.ThumbSticks.Right.Y);
@@ -65,23 +69,47 @@ public class PlayerMovement : MonoBehaviour
         {
             var force = leftStick.y > 0 ? ForwardForce : ReverseForce;
             rb.AddForce(transform.forward * leftStick.y * force, ForceMode.Acceleration);
+
+            if (leftStick.y > 0.1f)
+            {
+                //animator.SetBool("Move", true);
+                animator.SetBool("Hop", true);
+            }
+            else
+            {
+                //animator.SetBool("Move", false);
+                animator.SetBool("Hop", false);
+            }
         }
 
-        // Turn the seal with the "tail" as the pivot point
-        transform.RotateAround(transform.position - transform.forward / 2, new Vector3(0, 1, 0), leftStick.x * RotationSpeed * Time.deltaTime);
+        if (Mathf.Abs(leftStick.x) > 0.1f)
+        {
+            // Turn the seal with the "tail" as the pivot point
+            transform.RotateAround(transform.position - transform.forward / 2, new Vector3(0, 1, 0),
+                leftStick.x * RotationSpeed * Time.deltaTime);
+
+            if(leftStick.y < 0.3f)
+                animator.SetBool("Move", true);
+            else
+                animator.SetBool("Move", false);
+        }
+        else
+            animator.SetBool("Move", false);
 
         // Jump/attack
-        if (buttonAPressed /*&& allowJump*/ && !IsUpsideDown() && CanJump())
+        if (buttonAPressed && CanJump() && !IsUpsideDown())
         {
             rb.velocity = new Vector3();
 
-            var angle = transform.rotation
-                * Quaternion.AngleAxis(-JumpAngle, new Vector3(1, 0, 0));
-            var jumpVector = angle * Vector3.forward;
-            rb.AddForce(jumpVector * 5, ForceMode.Impulse);
+            //var angle = transform.rotation
+            //    * Quaternion.AngleAxis(-JumpAngle, new Vector3(1, 0, 0));
+            //var jumpVector = angle * Vector3.forward;
+            //rb.AddForce(jumpVector * 5, ForceMode.Impulse);
 
-            if (PlayerJumpEvent != null)
-                PlayerJumpEvent.Invoke();
+            //if (PlayerJumpEvent != null)
+            //    PlayerJumpEvent.Invoke();
+
+            StartCoroutine(Jump());
 
             allowJump = false;
         }
@@ -95,6 +123,27 @@ public class PlayerMovement : MonoBehaviour
         prevState = currentState;
     }
 
+    private IEnumerator Jump()
+    {
+        animator.SetTrigger("StartJump");
+        yield return new WaitForSeconds(0.24f);
+
+        var angle = transform.rotation
+                    * Quaternion.AngleAxis(-JumpAngle, new Vector3(1, 0, 0));
+        var jumpVector = angle * Vector3.forward;
+        rb.AddForce(jumpVector * 5, ForceMode.Impulse);
+
+        if (PlayerJumpEvent != null)
+            PlayerJumpEvent.Invoke();
+
+        yield return new WaitForSeconds(0.45f);
+        animator.SetTrigger("LandJump");
+
+        yield return new WaitForSeconds(1.2f);
+
+        allowJump = true;
+    }
+
     private bool CanJump()
     {
         var ray = new Ray(transform.position, Vector3.down);
@@ -106,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
             totalBounds.Encapsulate(collider.bounds);
         }
 
-        return Physics.Raycast(ray, totalBounds.extents.y);
+        return Physics.Raycast(ray, totalBounds.extents.y) && allowJump;
     }
 
     private bool IsUpsideDown()
@@ -118,9 +167,9 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    public void OnCollisionStay(Collision collision)
-    {
-        if (collision.transform.CompareTag("Ground"))
-            allowJump = true;
-    }
+    //public void OnCollisionStay(Collision collision)
+    //{
+    //    if (collision.transform.CompareTag("Ground"))
+    //        allowJump = true;
+    //}
 }

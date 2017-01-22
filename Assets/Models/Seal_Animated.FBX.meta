@@ -1,0 +1,975 @@
+fileFormatVersion: 2
+guid: 2cac75cb478e2fd4c9a53aa56254be23
+timeCreated: 1485032654
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Seal_
+    100002: //RootNode
+    100004: Seal_Body
+    100006: Seal_Body_Col
+    100008: Seal_EyeL
+    100010: Seal_EyeR
+    100012: Seal_FlipperB_Col
+    100014: Seal_FlipperL_Col
+    100016: Seal_FlipperR_Col
+    100018: Seal_Head
+    100020: Seal_LFlipper1
+    100022: Seal_LFlipper2
+    100024: Seal_LFlipper3
+    100026: Seal_LFlipperCollarbone
+    100028: Seal_Neck1
+    100030: Seal_Neck2
+    100032: Seal_Nose
+    100034: Seal_Pelvis
+    100036: Seal_RFlipper1
+    100038: Seal_RFlipper2
+    100040: Seal_RFlipper3
+    100042: Seal_RFlipperCollarbone
+    100044: Seal_RibCage
+    100046: Seal_Spine1
+    100048: Seal_Spine2
+    100050: Seal_Spine3
+    100052: Seal_Tail1
+    100054: Seal_Tail2
+    100056: Seal_Tail3
+    100058: Seal_TailEnd
+    100060: Seal_Whiskers
+    400000: Seal_
+    400002: //RootNode
+    400004: Seal_Body
+    400006: Seal_Body_Col
+    400008: Seal_EyeL
+    400010: Seal_EyeR
+    400012: Seal_FlipperB_Col
+    400014: Seal_FlipperL_Col
+    400016: Seal_FlipperR_Col
+    400018: Seal_Head
+    400020: Seal_LFlipper1
+    400022: Seal_LFlipper2
+    400024: Seal_LFlipper3
+    400026: Seal_LFlipperCollarbone
+    400028: Seal_Neck1
+    400030: Seal_Neck2
+    400032: Seal_Nose
+    400034: Seal_Pelvis
+    400036: Seal_RFlipper1
+    400038: Seal_RFlipper2
+    400040: Seal_RFlipper3
+    400042: Seal_RFlipperCollarbone
+    400044: Seal_RibCage
+    400046: Seal_Spine1
+    400048: Seal_Spine2
+    400050: Seal_Spine3
+    400052: Seal_Tail1
+    400054: Seal_Tail2
+    400056: Seal_Tail3
+    400058: Seal_TailEnd
+    400060: Seal_Whiskers
+    2300000: Seal_Body_Col
+    2300002: Seal_FlipperB_Col
+    2300004: Seal_FlipperL_Col
+    2300006: Seal_FlipperR_Col
+    3300000: Seal_Body_Col
+    3300002: Seal_FlipperB_Col
+    3300004: Seal_FlipperL_Col
+    3300006: Seal_FlipperR_Col
+    4300000: Seal_Body
+    4300002: Seal_EyeR
+    4300004: Seal_EyeL
+    4300006: Seal_Whiskers
+    4300008: Seal_Nose
+    4300010: Seal_Body_Col
+    4300012: Seal_FlipperR_Col
+    4300014: Seal_FlipperL_Col
+    4300016: Seal_FlipperB_Col
+    7400000: Idle to hop flat
+    7400002: Hop flat to idle
+    7400004: Hop
+    7400006: Big jump start to idle
+    7400008: Big jump idle
+    7400010: Big jump ground hit
+    7400012: Forward move
+    7400014: Roll right
+    7400016: Roll left
+    9500000: //RootNode
+    13700000: Seal_Body
+    13700002: Seal_EyeL
+    13700004: Seal_EyeR
+    13700006: Seal_Nose
+    13700008: Seal_Whiskers
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle to hop flat
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Seal_
+        weight: 1
+      - path: Seal_Body
+        weight: 1
+      - path: Seal_Body_Col
+        weight: 1
+      - path: Seal_EyeL
+        weight: 1
+      - path: Seal_EyeR
+        weight: 1
+      - path: Seal_FlipperB_Col
+        weight: 1
+      - path: Seal_FlipperL_Col
+        weight: 1
+      - path: Seal_FlipperR_Col
+        weight: 1
+      - path: Seal_Nose
+        weight: 1
+      - path: Seal_Pelvis
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2/Seal_LFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2/Seal_Head
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2/Seal_RFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3/Seal_TailEnd
+        weight: 1
+      - path: Seal_Whiskers
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Hop flat to idle
+      takeName: Take 001
+      firstFrame: 5
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Seal_
+        weight: 1
+      - path: Seal_Body
+        weight: 1
+      - path: Seal_Body_Col
+        weight: 1
+      - path: Seal_EyeL
+        weight: 1
+      - path: Seal_EyeR
+        weight: 1
+      - path: Seal_FlipperB_Col
+        weight: 1
+      - path: Seal_FlipperL_Col
+        weight: 1
+      - path: Seal_FlipperR_Col
+        weight: 1
+      - path: Seal_Nose
+        weight: 1
+      - path: Seal_Pelvis
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2/Seal_LFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2/Seal_Head
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2/Seal_RFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3/Seal_TailEnd
+        weight: 1
+      - path: Seal_Whiskers
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Hop
+      takeName: Take 001
+      firstFrame: 11
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Seal_
+        weight: 1
+      - path: Seal_Body
+        weight: 1
+      - path: Seal_Body_Col
+        weight: 1
+      - path: Seal_EyeL
+        weight: 1
+      - path: Seal_EyeR
+        weight: 1
+      - path: Seal_FlipperB_Col
+        weight: 1
+      - path: Seal_FlipperL_Col
+        weight: 1
+      - path: Seal_FlipperR_Col
+        weight: 1
+      - path: Seal_Nose
+        weight: 1
+      - path: Seal_Pelvis
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2/Seal_LFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2/Seal_Head
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2/Seal_RFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3/Seal_TailEnd
+        weight: 1
+      - path: Seal_Whiskers
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Big jump start to idle
+      takeName: Take 001
+      firstFrame: 31
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Seal_
+        weight: 1
+      - path: Seal_Body
+        weight: 1
+      - path: Seal_Body_Col
+        weight: 1
+      - path: Seal_EyeL
+        weight: 1
+      - path: Seal_EyeR
+        weight: 1
+      - path: Seal_FlipperB_Col
+        weight: 1
+      - path: Seal_FlipperL_Col
+        weight: 1
+      - path: Seal_FlipperR_Col
+        weight: 1
+      - path: Seal_Nose
+        weight: 1
+      - path: Seal_Pelvis
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2/Seal_LFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2/Seal_Head
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2/Seal_RFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3/Seal_TailEnd
+        weight: 1
+      - path: Seal_Whiskers
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Big jump idle
+      takeName: Take 001
+      firstFrame: 69
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Seal_
+        weight: 1
+      - path: Seal_Body
+        weight: 1
+      - path: Seal_Body_Col
+        weight: 1
+      - path: Seal_EyeL
+        weight: 1
+      - path: Seal_EyeR
+        weight: 1
+      - path: Seal_FlipperB_Col
+        weight: 1
+      - path: Seal_FlipperL_Col
+        weight: 1
+      - path: Seal_FlipperR_Col
+        weight: 1
+      - path: Seal_Nose
+        weight: 1
+      - path: Seal_Pelvis
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2/Seal_LFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2/Seal_Head
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2/Seal_RFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3/Seal_TailEnd
+        weight: 1
+      - path: Seal_Whiskers
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Big jump ground hit
+      takeName: Take 001
+      firstFrame: 70
+      lastFrame: 105
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Seal_
+        weight: 1
+      - path: Seal_Body
+        weight: 1
+      - path: Seal_Body_Col
+        weight: 1
+      - path: Seal_EyeL
+        weight: 1
+      - path: Seal_EyeR
+        weight: 1
+      - path: Seal_FlipperB_Col
+        weight: 1
+      - path: Seal_FlipperL_Col
+        weight: 1
+      - path: Seal_FlipperR_Col
+        weight: 1
+      - path: Seal_Nose
+        weight: 1
+      - path: Seal_Pelvis
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2/Seal_LFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2/Seal_Head
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2/Seal_RFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3/Seal_TailEnd
+        weight: 1
+      - path: Seal_Whiskers
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Forward move
+      takeName: Take 001
+      firstFrame: 105
+      lastFrame: 125
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Seal_
+        weight: 1
+      - path: Seal_Body
+        weight: 1
+      - path: Seal_Body_Col
+        weight: 1
+      - path: Seal_EyeL
+        weight: 1
+      - path: Seal_EyeR
+        weight: 1
+      - path: Seal_FlipperB_Col
+        weight: 1
+      - path: Seal_FlipperL_Col
+        weight: 1
+      - path: Seal_FlipperR_Col
+        weight: 1
+      - path: Seal_Nose
+        weight: 1
+      - path: Seal_Pelvis
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2/Seal_LFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2/Seal_Head
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2/Seal_RFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3/Seal_TailEnd
+        weight: 1
+      - path: Seal_Whiskers
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Roll right
+      takeName: Take 001
+      firstFrame: 125
+      lastFrame: 145
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Seal_
+        weight: 1
+      - path: Seal_Body
+        weight: 1
+      - path: Seal_Body_Col
+        weight: 1
+      - path: Seal_EyeL
+        weight: 1
+      - path: Seal_EyeR
+        weight: 1
+      - path: Seal_FlipperB_Col
+        weight: 1
+      - path: Seal_FlipperL_Col
+        weight: 1
+      - path: Seal_FlipperR_Col
+        weight: 1
+      - path: Seal_Nose
+        weight: 1
+      - path: Seal_Pelvis
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2/Seal_LFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2/Seal_Head
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2/Seal_RFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3/Seal_TailEnd
+        weight: 1
+      - path: Seal_Whiskers
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Roll left
+      takeName: Take 001
+      firstFrame: 145
+      lastFrame: 165
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Seal_
+        weight: 1
+      - path: Seal_Body
+        weight: 1
+      - path: Seal_Body_Col
+        weight: 1
+      - path: Seal_EyeL
+        weight: 1
+      - path: Seal_EyeR
+        weight: 1
+      - path: Seal_FlipperB_Col
+        weight: 1
+      - path: Seal_FlipperL_Col
+        weight: 1
+      - path: Seal_FlipperR_Col
+        weight: 1
+      - path: Seal_Nose
+        weight: 1
+      - path: Seal_Pelvis
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_LFlipperCollarbone/Seal_LFlipper1/Seal_LFlipper2/Seal_LFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_Neck1/Seal_Neck2/Seal_Head
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Spine1/Seal_Spine2/Seal_Spine3/Seal_RibCage/Seal_RFlipperCollarbone/Seal_RFlipper1/Seal_RFlipper2/Seal_RFlipper3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3
+        weight: 1
+      - path: Seal_Pelvis/Seal_Tail1/Seal_Tail2/Seal_Tail3/Seal_TailEnd
+        weight: 1
+      - path: Seal_Whiskers
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
