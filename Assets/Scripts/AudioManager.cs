@@ -25,21 +25,41 @@ public class AudioManager : MonoBehaviour
         efx_waterSplash
     };
 
-
-    private AudioSource m_mainCameraAudioSource = null;
     private Dictionary<string, AudioClip> m_ClipToPlay = new Dictionary<string, AudioClip>();
+
 
 	// Use this for initialization
 	void Start ()
     {
         _instance = this;
 
-        foreach(AudioClip _clip in SoundFiles)
+        if (SoundFiles != null)
         {
-            m_ClipToPlay.Add(_clip.name, _clip);
+            foreach (AudioClip _clip in SoundFiles)
+            {
+                if(_clip == null)
+                {
+                    Debug.LogError("SoundClip file was null!");
+                    return;
+                }
+
+                m_ClipToPlay.Add(_clip.name, _clip);
+            }
         }
 	}
-	
+
+    public bool PlaySoundEffect(AudioSource _source)
+    {
+        if (_source.clip != null)
+        {
+            _source.Play();
+            return true;
+        }
+
+        Debug.LogError(_source.gameObject.name + " does not have a AudioClip!");
+
+        return false;
+    }
 
     public bool PlaySoundEffect(string efxName, AudioSource _source)
     {
@@ -50,10 +70,8 @@ public class AudioManager : MonoBehaviour
             _source.Play();
             return true;
         }
-        else
-        {
-            Debug.LogError("SoundEffect for " + efxName + " were not found!");
-        }
+
+        Debug.LogError("SoundEffect for " + efxName + " were not found!");
 
         return false;
     }
@@ -70,10 +88,8 @@ public class AudioManager : MonoBehaviour
             MainCameraAudioSource.Play();
             return true;
         }
-        else
-        {
-            Debug.LogError("Music for " + musicName + " were not found!");
-        }
+
+        Debug.LogError("Music for " + musicName + " were not found!");
 
         return false;
     }
