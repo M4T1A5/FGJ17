@@ -9,7 +9,7 @@ public class PUPSpawner : MonoBehaviour
     public float TrampolineFirstSpawnTimer = 60.0f;
     public float TrampolineSpawnInterval = 15.0f;
 
-    [Tooltip("Put 0 for no limits.")]
+    [Tooltip("Put -1 for no limits.")]
     public int TrampolineAmountsPerGame = 1;
     private int m_amountOfTrampolinesSpawned = 0;
 
@@ -32,7 +32,8 @@ public class PUPSpawner : MonoBehaviour
             SpawnPowerUp(TrampolinePrefab);
             m_timer = 0.0f;
         }
-        else if (m_timer >= TrampolineSpawnInterval && m_amountOfTrampolinesSpawned <= TrampolineAmountsPerGame)
+        else if (m_timer >= TrampolineSpawnInterval && m_amountOfTrampolinesSpawned < TrampolineAmountsPerGame
+            || m_timer >= TrampolineSpawnInterval && TrampolineAmountsPerGame == -1)
         {
             m_amountOfTrampolinesSpawned++;
             SpawnPowerUp(TrampolinePrefab);
