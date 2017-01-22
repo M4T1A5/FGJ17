@@ -25,10 +25,25 @@ public class PUPSpawner : MonoBehaviour
     private void Update()
     {
         m_timer += Time.deltaTime;
+
+        if(m_amountOfTrampolinesSpawned == 0 && m_timer >= TrampolineFirstSpawnTimer)
+        {
+            m_amountOfTrampolinesSpawned++;
+            SpawnPowerUp(TrampolinePrefab);
+            m_timer = 0.0f;
+        }
+        else if (m_timer >= TrampolineSpawnInterval && m_amountOfTrampolinesSpawned <= TrampolineAmountsPerGame)
+        {
+            m_amountOfTrampolinesSpawned++;
+            SpawnPowerUp(TrampolinePrefab);
+            m_timer = 0.0f;
+        }
     }
 
-    private void SpawnPowerUp(Vector3 position, GameObject pup)
+    private void SpawnPowerUp(GameObject pup)
     {
+        var position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
+
         var _pup = Instantiate(pup, position, Quaternion.identity) as GameObject;
 
         if(_pup == null)
@@ -37,7 +52,6 @@ public class PUPSpawner : MonoBehaviour
             return;
         }
 
-        if (_pup == TrampolinePrefab)
-            m_amountOfTrampolinesSpawned++;
+        
     }
 }
