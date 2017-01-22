@@ -54,3 +54,4 @@ MonoBehaviour:
   MainCameraAudioSource: {fileID: 0}
   SoundFiles:
   - {fileID: 8300000, guid: 45d66ec40b8de1947b9767a0c4ab59ad, type: 3}
+  - {fileID: 8300000, guid: d626fd9891a87c14e9c46e2bab6c6bd6, type: 3}

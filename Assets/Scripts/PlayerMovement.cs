@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
 
     private Animator animator;
+    private AudioSource audioSource;
 
     private GamePadState prevState, currentState;
 
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         PlayerIndex = (PlayerIndex) GetComponent<Player>().PlayerId;
 
         animator = transform.GetChild(0).GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -73,6 +75,8 @@ public class PlayerMovement : MonoBehaviour
             if (leftStick.y > 0.1f)
             {
                 animator.SetBool("Hop", true);
+                if(!audioSource.isPlaying)
+                    AudioManager.Instance.PlaySoundEffect("move", audioSource);
             }
             else
             {
@@ -123,6 +127,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (PlayerJumpEvent != null)
             PlayerJumpEvent.Invoke();
+
+        AudioManager.Instance.PlaySoundEffect("efx_jump", audioSource);
 
         yield return new WaitForSeconds(0.45f);
         animator.SetTrigger("LandJump");
