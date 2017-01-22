@@ -25,8 +25,6 @@ public class AudioManager : MonoBehaviour
         efx_waterSplash
     };
 
-
-    private AudioSource m_mainCameraAudioSource = null;
     private Dictionary<string, AudioClip> m_ClipToPlay = new Dictionary<string, AudioClip>();
 
 	// Use this for initialization
@@ -34,9 +32,17 @@ public class AudioManager : MonoBehaviour
     {
         _instance = this;
 
-        foreach(AudioClip _clip in SoundFiles)
+        if (SoundFiles != null)
         {
-            m_ClipToPlay.Add(_clip.name, _clip);
+            foreach (AudioClip _clip in SoundFiles)
+            {
+                if(_clip == null)
+                {
+                    Debug.LogError("SoundClip file was null!");
+                    return;
+                }
+                m_ClipToPlay.Add(_clip.name, _clip);
+            }
         }
 	}
 	
