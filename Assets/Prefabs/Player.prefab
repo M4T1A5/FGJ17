@@ -1119,6 +1119,8 @@ MonoBehaviour:
   LastHitTime: 5
   hasLastHit: 0
   LastHit: {fileID: 0}
+  PlayerDeathEffect: {fileID: 1000012402107764, guid: fa6bd6dde443383419551c0ec7dd6d6b,
+    type: 2}
 --- !u!114 &114000010309856474
 MonoBehaviour:
   m_ObjectHideFlags: 1

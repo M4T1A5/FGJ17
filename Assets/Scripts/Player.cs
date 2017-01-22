@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     public int LastHitTime = 5;
     public bool hasLastHit;
     public Transform LastHit;
+
+    public GameObject PlayerDeathEffect;
+
     private scoreSystem _scoreSys;
 
     private Coroutine timer;
@@ -60,6 +63,8 @@ public class Player : MonoBehaviour
             _scoreSys.updateScore(PlayerId, -1);
         }
 
+        var effect = Instantiate(PlayerDeathEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 2.0f);
         Destroy(gameObject);
     }
 
