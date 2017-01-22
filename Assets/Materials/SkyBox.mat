@@ -6,15 +6,21 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Water
-  m_Shader: {fileID: 4800000, guid: 475c4a4e617a8401b84ca7b32c7cc460, type: 3}
-  m_ShaderKeywords: _EMISSION
+  m_Name: SkyBox
+  m_Shader: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION _SUNDISK_HIGH_QUALITY
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
+    - first:
+        name: _BackTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - first:
         name: _BumpMap
       second:
@@ -40,13 +46,25 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
+        name: _DownTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _EmissionMap
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _Fresnel
+        name: _FrontTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _LeftTex
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -76,30 +94,27 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _ReflectionTex
+        name: _RightTex
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _ReflectiveColor
+        name: _Tex
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _RefractionTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ShoreTex
+        name: _UpTex
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: _AtmosphereThickness
+      second: 0.71
     - first:
         name: _BumpScale
       second: 1
@@ -113,11 +128,8 @@ Material:
         name: _DstBlend
       second: 0
     - first:
-        name: _FresnelScale
-      second: 0.75
-    - first:
-        name: _GerstnerIntensity
-      second: 1
+        name: _Exposure
+      second: 0.62
     - first:
         name: _GlossMapScale
       second: 1
@@ -140,14 +152,8 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
-        name: _ReflDistort
-      second: 0.44
-    - first:
-        name: _RefrDistort
-      second: 0.4
-    - first:
-        name: _Shininess
-      second: 200
+        name: _Rotation
+      second: 0
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -158,78 +164,30 @@ Material:
         name: _SrcBlend
       second: 1
     - first:
-        name: _UVSec
+        name: _SunDisk
+      second: 2
+    - first:
+        name: _SunSize
       second: 0
     - first:
-        name: _WaveScale
-      second: 0.063
+        name: _UVSec
+      second: 0
     - first:
         name: _ZWrite
       second: 1
     m_Colors:
     - first:
-        name: WaveSpeed
-      second: {r: 19, g: 9, b: -16, a: -7}
-    - first:
-        name: _AnimationDirection
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _AnimationTiling
-      second: {r: 2.2, g: 2.2, b: -1.1, a: -1.1}
-    - first:
-        name: _BaseColor
-      second: {r: 0.54, g: 0.95, b: 0.99, a: 0.5}
-    - first:
-        name: _BumpDirection
-      second: {r: 1, g: 1, b: -1, a: 1}
-    - first:
-        name: _BumpTiling
-      second: {r: 1, g: 1, b: -2, a: 3}
-    - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _DistortParams
-      second: {r: 1, g: 1, b: 2, a: 1.15}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
-        name: _Foam
-      second: {r: 0.1, g: 0.375, b: 0, a: 0}
+        name: _GroundColor
+      second: {r: 0.369, g: 0.349, b: 0.341, a: 1}
     - first:
-        name: _GAmplitude
-      second: {r: 0.3, g: 0.35, b: 0.25, a: 0.25}
+        name: _SkyTint
+      second: {r: 0.5735294, g: 0.5735294, b: 0.5735294, a: 1}
     - first:
-        name: _GDirectionAB
-      second: {r: 0.3, g: 0.85, b: 0.85, a: 0.25}
-    - first:
-        name: _GDirectionCD
-      second: {r: 0.1, g: 0.9, b: 0.5, a: 0.5}
-    - first:
-        name: _GFrequency
-      second: {r: 1.3, g: 1.35, b: 1.25, a: 1.25}
-    - first:
-        name: _GSpeed
-      second: {r: 1.2, g: 1.375, b: 1.1, a: 1.5}
-    - first:
-        name: _GSteepness
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _HorizonColor
-      second: {r: 0.172, g: 0.463, b: 0.435, a: 1}
-    - first:
-        name: _InvFadeParemeter
-      second: {r: 0.15, g: 0.15, b: 0.5, a: 1}
-    - first:
-        name: _ReflectionColor
-      second: {r: 0.54, g: 0.95, b: 0.99, a: 0.5}
-    - first:
-        name: _RefrColor
-      second: {r: 0.34, g: 0.85, b: 0.92, a: 1}
-    - first:
-        name: _SpecularColor
-      second: {r: 0.72, g: 0.72, b: 0.72, a: 1}
-    - first:
-        name: _WorldLightDir
-      second: {r: 0, g: 0.1, b: -0.5, a: 0}
+        name: _Tint
+      second: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
