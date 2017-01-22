@@ -1135,9 +1135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrampolinePrefab: {fileID: 1000010879620056, guid: f98c911253b663245a67bf171bc4a7e6,
     type: 2}
-  TrampolineFirstSpawnTimer: 5
+  TrampolineFirstSpawnTimer: 30
   TrampolineSpawnInterval: 15
-  TrampolineAmountsPerGame: 1
+  TrampolineAmountsPerGame: -1
 --- !u!4 &1524389419
 Transform:
   m_ObjectHideFlags: 0
