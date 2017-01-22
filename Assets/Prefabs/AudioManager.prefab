@@ -53,4 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCameraAudioSource: {fileID: 0}
   SoundFiles:
-  - {fileID: 8300000, guid: 08934ce49aeeb0e4487107910e34aec5, type: 3}
+  - {fileID: 8300000, guid: 45d66ec40b8de1947b9767a0c4ab59ad, type: 3}

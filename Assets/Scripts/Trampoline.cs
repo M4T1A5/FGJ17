@@ -28,6 +28,8 @@ public class Trampoline : MonoBehaviour
 
         animator.SetTrigger("Play");
 
+        AudioManager.Instance.PlaySoundEffect(GetComponent<AudioSource>());
+
         Destroy(gameObject, 3.5f);
     }
 }
