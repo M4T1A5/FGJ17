@@ -6,6 +6,8 @@ public class PlayerSpawner : MonoBehaviour
 {
     public GameObject PlayerPrefab;
 
+    public Material[] PlayerMaterials;
+
     private Transform[] spawnPoints;
 
     private bool initialSpawn = true;
@@ -50,22 +52,7 @@ public class PlayerSpawner : MonoBehaviour
         var player = Instantiate(PlayerPrefab, position, Quaternion.identity) as GameObject;
         player.GetComponent<Player>().PlayerId = playerId;
         var renderer = player.GetComponentInChildren<Renderer>();
-
-        switch (playerId)
-        {
-            case 0:
-                renderer.material.color  = Color.blue;
-                break;
-            case 1:
-                renderer.material.color = Color.red;
-                break;
-            case 2:
-                renderer.material.color = Color.green;
-                break;
-            case 3:
-                renderer.material.color = Color.yellow;
-                break;
-        }
+        renderer.material = PlayerMaterials[playerId];
     }
 
     public void RequestRespawn(int playerId)
