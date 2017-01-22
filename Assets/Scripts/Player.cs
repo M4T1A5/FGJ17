@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        _scoreSys = GameManager.Instance.ScoreSystem;
+        _scoreSys = FindObjectOfType<scoreSystem>();
     }
 
     private void OnCollisionStay(Collision collision)

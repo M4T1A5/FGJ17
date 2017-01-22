@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public scoreSystem ScoreSystem;
 
+
     private void Awake()
     {
         if (Instance == null)
@@ -20,12 +22,15 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(gameObject);
-
-        ScoreSystem = FindObjectOfType<scoreSystem>();
     }
 
     public void SetPlayerCount(int players)
     {
         PlayerCount = players;
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Game");
     }
 }

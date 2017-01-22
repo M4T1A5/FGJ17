@@ -72,12 +72,10 @@ public class PlayerMovement : MonoBehaviour
 
             if (leftStick.y > 0.1f)
             {
-                //animator.SetBool("Move", true);
                 animator.SetBool("Hop", true);
             }
             else
             {
-                //animator.SetBool("Move", false);
                 animator.SetBool("Hop", false);
             }
         }
@@ -100,17 +98,7 @@ public class PlayerMovement : MonoBehaviour
         if (buttonAPressed && CanJump() && !IsUpsideDown())
         {
             rb.velocity = new Vector3();
-
-            //var angle = transform.rotation
-            //    * Quaternion.AngleAxis(-JumpAngle, new Vector3(1, 0, 0));
-            //var jumpVector = angle * Vector3.forward;
-            //rb.AddForce(jumpVector * 5, ForceMode.Impulse);
-
-            //if (PlayerJumpEvent != null)
-            //    PlayerJumpEvent.Invoke();
-
             StartCoroutine(Jump());
-
             allowJump = false;
         }
 
